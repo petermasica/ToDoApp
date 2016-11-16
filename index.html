@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>ToDo App</title>
+	<link rel="stylesheet" href="css/FAIcons.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	
+	<div id="toDoApp">
+
+		<div id="listNameOption">
+			<input type="text" id="listNameInput" placeholder="List Name">
+			<a href="#" id="newOpenButton">Create new / open existing list</a>
+		</div>
+		
+		<div id="appCore" class="hidden">
+			<header>
+				<div id="listDesc">
+					List Name: <span id="listName"></span>
+				</div>
+				<a href="#" id="switchListButton">Switch to another list</a>
+			</header>
+
+			<div id="initialInput">
+				<div class="content">
+					<span class="taskInputError"></span>
+					<input type="text" id="taskInput" name="taskInput" placeholder="Your Task">	
+				</div>
+				<div class="completeBy">
+					<span class="completeByInputError"></span>
+					<label for="completeByInput">Complete by:</label>
+					<input type="text" id="completeByInput" name="completeByInput" placeholder="dd/mm/yyyy" size="10" maxlength="10">	
+				</div>
+				<a href="#" id="addButton">Add to the list</a>
+			</div>
+
+			<ul id="toDoList"></ul>
+		</div>
+
+	</div>
+
+	<script src="js/taskModule.js"></script>
+	<script src="js/listNameOptionModule.js"></script>
+</body>
+</html>

@@ -1,0 +1,255 @@
+body {
+	max-width: 1000px;
+	margin: 0 auto;
+	font-family: sans-serif;
+}
+
+a {
+	text-decoration: none;
+}
+
+input {
+	border: 2px solid #000;
+	border-radius: 5px;
+}
+
+header {
+	padding: 15px 15px 30px;
+	text-align: right;
+}
+
+/* #listOption */
+#listNameOption {
+	position: absolute;
+    top: 35%;
+    width: 100%;
+    max-width: 1000px;
+	text-align: center;
+}
+
+#listNameInput {
+	width: 25%;
+	font-size: 1.5em;
+	text-align: center;
+	padding: 8px 3px;
+	margin-right: 10px;
+}
+
+#newOpenButton, #addButton {
+	background: #4a0584;
+	color: #fff;
+	text-transform: capitalize;
+	padding: 15px 5px;
+	border-radius: 5px;
+	position: relative;
+	top: -4px;
+}
+
+#newOpenButton:hover, #addButton:hover {
+	background: #6f07c5;
+}
+
+/* #appCore */
+#listDesc {
+	margin-bottom: 5px;
+}
+
+#switchListButton {
+	margin-top: 30px;
+	color: blue;
+	font-size: 13px;
+}
+
+#switchListButton:hover {
+	text-decoration: underline;
+}
+
+#initialInput {
+	text-align: center;
+}
+
+#initialInput .content, #initialInput .completeBy {
+	position: relative;
+	display: inline-block;
+	margin-right: 10px;
+}
+
+#initialInput .content {
+	width: 30%;
+}
+#taskInput {
+	width: 100%;
+	box-sizing: border-box;
+}
+
+#taskInput, #completeByInput {
+	font-size: 1.5em;
+	padding: .25em;
+	text-align: center;
+}
+
+#addButton {
+	padding: 13px 8px;
+}
+
+/* #toDoList */
+#toDoList {
+	padding: 0;
+	margin-top: 60px;
+}
+
+#toDoList li {
+	list-style-type: none;
+	border: 1px solid black;
+	border-radius: 5px;
+	width: 30%;
+	min-width: 300px;
+	margin: 0 auto 7px;
+	padding: 5px;
+}
+
+#toDoList li::after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+#toDoList .readingView .completeBy {
+	float: left; font-size: .7em;
+}
+
+#toDoList .controls {
+	float: right; text-align: right;
+}
+
+#toDoList .controls a {
+	color: blue;
+}
+
+#toDoList .controls a:first-child {
+	margin-right: 5px;
+}
+
+#toDoList .content {
+	clear: both;
+	padding: 10px 0;
+}
+
+#toDoList .created {
+	float: left;
+}
+
+#toDoList .modified {
+	float: right;
+}
+
+#toDoList .created, #toDoList .modified {
+	font-size: .5em;
+}
+
+#toDoList .editingView {
+	font-size: .85em;
+	padding: 2px;
+}
+
+#toDoList .editingView .controls {
+	margin-bottom: 10px;
+}
+
+#toDoList .editingView .content {
+	position: relative;
+}
+
+#toDoList .editingView .completeBy {
+	position: relative; padding: 10px 0;
+}
+
+#toDoList .taskInput {
+	width: 70%;
+}
+
+#toDoList .editingView input {
+	font-size: 1em;
+}
+
+.hidden {
+	display: none;
+}
+
+/* ERROR FIELDS */
+#initialInput .taskInputError, #initialInput .completeByInputError {
+	position: absolute;
+	top: -16px;
+	width: 100%;
+	text-align: center;
+	font-size: 12px;
+	color: red;
+}
+
+#initialInput .completeByInputError {
+	padding-left: 50px;
+}
+
+#toDoList .taskInputError, #toDoList .completeByInputError {
+	position: absolute;
+	top: -4px;
+	font-size: 10px;
+	color: red;
+}
+
+#toDoList .taskInputError {
+	width: 60%;
+	margin-left: 40%;
+}
+
+#toDoList .completeByInputError {
+	width: 80%;
+	margin-left: 20%;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 730px) {
+
+	#listNameInput {
+		width: 200px;
+	}
+
+	#initialInput .content {
+    	display: block;
+    	width: 390px;
+    	margin: 0 auto 23px;
+	}
+}
+
+@media (max-width: 500px) {
+	#listNameInput {
+		width: 237px;
+		margin-right: 0;
+	}
+
+	#newOpenButton {
+		display: block;
+		width: 237px;
+		margin: 15px auto 0;
+	}
+
+	#initialInput .content {
+		width: 312px;
+	}
+
+	#initialInput .completeBy {
+		width: 312px;
+		margin-right: 0;
+	}
+
+	#completeByInput {
+		width: 197px;
+	}
+
+	#addButton {
+		display: block;
+		width: 312px;
+		padding: 13px 0;
+		margin: 15px auto;
+	}
+}
